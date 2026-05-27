@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: spring-modulith
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/booknest_modulith
+    username: root
+    password: 123Andrei
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        type:
+          preferred_uuid_jdbc_type: VARCHAR
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "gotaseptimiuandrei@gmail.com"
+    password: "ucqioanuzkzuukne"
+    properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+  modulith:
+    events:
+      externalization:
+        enabled: false
+rsa:
+  private-key: classpath:certs/private_key.pem
+  public-key: classpath:certs/public_key.pem

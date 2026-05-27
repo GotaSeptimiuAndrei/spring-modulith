@@ -1,0 +1,26 @@
+package com.example.springmodulith.review.internal.dto;
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ReviewRequest {
+
+    @NotNull(message = "Book id is required.")
+    private Long bookId;
+
+    @Min(value = 1, message = "Min value for a review is 1.")
+    @Max(value = 5, message = "Max value for a review is 5.")
+    private Double rating;
+
+    @Size(max = 1000, message = "Review description cannot exceed 1000 characters.")
+    private String reviewDescription;
+
+}
