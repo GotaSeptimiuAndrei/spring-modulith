@@ -47,8 +47,7 @@ Using **ArchUnit** via Spring Modulith’s testing module, we implemented a test
 
 Additionally, this exact same test dynamically generates our **C4 component diagrams** and **PlantUML files** by inspecting the live code, ensuring our architectural documentation is never out of date.
 
-*(Insert your generated C4/PlantUML diagram screenshots here)*
-
+![diagram](https://github.com/GotaSeptimiuAndrei/spring-modulith/blob/main/components-SpringModulithApplication.png?raw=true)
 ---
 
 ## 🎉 5. Conclusion
