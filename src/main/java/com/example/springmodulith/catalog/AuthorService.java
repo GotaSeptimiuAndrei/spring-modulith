@@ -25,6 +25,7 @@ public class AuthorService {
 
     @ApplicationModuleListener
     public void onAuthorRegistered(AuthorRegisteredEvent event) {
+        //if (true) throw new RuntimeException("Simulated Database Timeout in Catalog Module!");
         Author author = new Author();
         author.setFullName(event.name());
         author.setEmail(event.email());
